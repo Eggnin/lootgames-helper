@@ -1,0 +1,16 @@
+# Gradle / build outputs
+.gradle/
+build/
+out/
+run/
+logs/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+bin/

@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "lgsudoku",
+    "name": "LootGames Helper",
+    "description": "Client-side helpers for the LootGames (GTNH) minigames: fills the sudoku board (LootGames syncs the solution) and solves minesweeper (the solution is not synced, so it is deduced from the revealed numbers). Sends the same right/left clicks a player would.",
+    "version": "${modVersion}",
+    "mcversion": "1.7.10",
+    "url": "https://github.com/GTNewHorizons/LootGames",
+    "updateUrl": "",
+    "authorList": ["lgsudoku"],
+    "credits": "Interacts with LootGames by GTNewHorizons (reflection based, no compile dependency).",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": ["after:lootgames"]
+  }
+]
