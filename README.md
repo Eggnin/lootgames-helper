@@ -58,5 +58,6 @@ client {
 
 ## 下载
 
-- 本仓库 `dist/LootGamesHelper-1.1.2.jar`
-- 或自行构建：`set JAVA_HOME=<JDK 25>` 后运行 `gradlew.bat build`，产物在 `build/libs/`
+- [Releases](https://github.com/Eggnin/lootgames-helper/releases) 页下载 `LootGamesHelper-1.1.2.jar`
+- 或直接用本仓库 `dist/LootGamesHelper-1.1.2.jar`
+- 自行构建：`set JAVA_HOME=<JDK 25>` 后运行 `gradlew.bat build`，产物在 `build/libs/`
