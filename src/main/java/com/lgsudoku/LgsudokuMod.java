@@ -30,6 +30,8 @@ import cpw.mods.fml.common.gameevent.TickEvent;
  * right clicks a player would send.</li>
  * <li><b>扫雷</b>: the solution is <em>not</em> synced (hidden fields have no type), so the board is
  * solved from the revealed numbers and safe cells are revealed with normal left clicks.</li>
+ * <li><b>游戏灯</b>: LootGames syncs the shown symbol sequence, so it is recorded and repeated with
+ * normal left clicks.</li>
  * </ul>
  *
  * <p>
@@ -46,7 +48,7 @@ public class LgsudokuMod {
 
     public static final String MODID = "lgsudoku";
     public static final String NAME = "LootGames Helper";
-    public static final String VERSION = "1.1.2";
+    public static final String VERSION = "1.2.0";
 
     private static final Logger LOG = LogManager.getLogger(NAME);
 
@@ -153,8 +155,10 @@ public class LgsudokuMod {
             if (mc.theWorld == null || mc.thePlayer == null) {
                 SudokuBridge.invalidate();
                 MinesweeperBridge.invalidate();
+                GameOfLightBridge.invalidate();
                 AutoSolver.abort();
                 MinesweeperSolver.abort();
+                GameOfLightSolver.abort();
                 return;
             }
 
@@ -173,8 +177,10 @@ public class LgsudokuMod {
 
             SudokuBridge.tickCache(mc);
             MinesweeperBridge.tickCache(mc);
+            GameOfLightBridge.tickCache(mc);
             AutoSolver.tick(mc);
             MinesweeperSolver.tick(mc);
+            GameOfLightSolver.tick(mc);
         }
     }
 }

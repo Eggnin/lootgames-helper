@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.lgsudoku"
-version = "1.1.2"
+version = "1.2.0"
 
 java {
   toolchain {

@@ -44,6 +44,7 @@ public final class HintRenderer {
 
         renderSudoku(mc);
         renderMinesweeper(mc);
+        renderGameOfLight(mc);
     }
 
     private void renderSudoku(Minecraft mc) {
@@ -155,6 +156,29 @@ public final class HintRenderer {
 
         drawFlatTiles(safeX, safeZ, safe, view.y, 80, 230, 120, 70);
         drawFlatTiles(mineX, mineZ, mine, view.y, 240, 70, 70, 90);
+    }
+
+    /** Highlights the Game of Light cell that has to be clicked next. */
+    private void renderGameOfLight(Minecraft mc) {
+        GameOfLightBridge.View view = GameOfLightBridge.current(mc);
+        if (view == null) {
+            return;
+        }
+
+        int offset = GameOfLightSolver.nextCellOffset();
+        if (offset < 0) {
+            return;
+        }
+
+        drawFlatTiles(
+                new int[] { view.cellX(offset) },
+                new int[] { view.cellZ(offset) },
+                1,
+                view.y,
+                80,
+                230,
+                120,
+                90);
     }
 
     /** Draws flat translucent squares slightly above the given block layer. */

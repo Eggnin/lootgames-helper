@@ -1,9 +1,10 @@
 # LootGames Helper
 
-GTNH 里 **LootGames** 小游戏（数独 / 扫雷）的客户端辅助模组：按一个键自动解题，另一个键开关提示。
+GTNH 里 **LootGames** 小游戏（数独 / 扫雷 / 游戏灯）的客户端辅助模组：按一个键自动解题，另一个键开关提示。
 
 - 数独：按 `K` 自动填完，四关连过
 - 扫雷：按 `K` 自动解，四关连过
+- 游戏灯：按 `K` 自动复述记忆序列，四关连过
 - 纯客户端模组，服务器不需要安装
 
 ## 环境
@@ -14,15 +15,16 @@ GTNH 里 **LootGames** 小游戏（数独 / 扫雷）的客户端辅助模组：
 
 ## 安装
 
-把 `LootGamesHelper-1.1.2.jar` 放进 `mods/` 文件夹，重启游戏。
+把 `LootGamesHelper-1.2.0.jar` 放进 `mods/` 文件夹，重启游戏。
 
 ## 使用
 
 1. 走到棋盘旁边（数独 9×9、扫雷 13×13～19×19，棋盘就是脚下那层方块）。
-2. 按 `K`：自动解**最近**的那个棋盘（数独还是扫雷会自动判断）。再按一次停止。
+2. 按 `K`：自动解**最近**的那个棋盘（数独 / 扫雷 / 游戏灯会自动判断）。再按一次停止。
 3. 按 `L`：开关棋盘提示。
    - 数独：空格显示绿色答案；**还没点到的格子会铺绿色方块**，填完就消失。
    - 扫雷：推断出的安全格标绿、雷标红。
+   - 游戏灯：下一个该按的格子标绿。
 
 按键可以在 **选项 → 控制 → LootGames 助手** 里改（默认 `K` / `L`）。
 
@@ -54,10 +56,11 @@ client {
 
 - 潜行中、打开界面时会自动暂停。
 - 距离太远的格子不会乱点，会提示你走过去。
-- 数独/扫雷的四关都会连续自动通过，奖励照常发放。
+- 数独/扫雷/游戏灯的四关都会连续自动通过，奖励照常发放。
+- 游戏灯是记忆序列：展示阶段会记住整段序列，轮到你了就照着复述。
 
 ## 下载
 
-- [Releases](https://github.com/Eggnin/lootgames-helper/releases) 页下载 `LootGamesHelper-1.1.2.jar`
-- 或直接用本仓库 `dist/LootGamesHelper-1.1.2.jar`
+- [Releases](https://github.com/Eggnin/lootgames-helper/releases) 页下载 `LootGamesHelper-1.2.0.jar`
+- 或直接用本仓库 `dist/LootGamesHelper-1.2.0.jar`
 - 自行构建：`set JAVA_HOME=<JDK 25>` 后运行 `gradlew.bat build`，产物在 `build/libs/`

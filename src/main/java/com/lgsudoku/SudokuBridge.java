@@ -25,6 +25,7 @@ public final class SudokuBridge {
 
     static final String SUDOKU_TILE_CLASS = "ru.timeconqueror.lootgames.common.block.tile.SudokuTile";
     static final String MS_TILE_CLASS = "ru.timeconqueror.lootgames.common.block.tile.MSMasterTile";
+    static final String GOL_TILE_CLASS = "ru.timeconqueror.lootgames.common.block.tile.GOLMasterTile";
 
     /**
      * The server accepts a right click when
